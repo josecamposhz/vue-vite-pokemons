@@ -1,0 +1,43 @@
+@import 'variables';
+
+@each $key, $val in $colors {
+	.#{$key} {
+		background-color: $val;
+	}
+
+	.#{$key}:hover {
+		background-color: mix(black, $val, 5);
+	}
+}
+
+.pokemon-card {
+	padding: 1rem;
+	border-radius: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: capitalize;
+	color: #fff;
+	cursor: pointer;
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+	.pokemon-image {
+		max-height: 120px;
+		max-width: 120px;
+	}
+	&:hover {
+		box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.pokemon-type {
+	display: inline-block;
+	border-radius: 1rem;
+	padding: 0.4rem 0.6rem;
+	margin: 0 0.2rem;
+	background-color: rgba(255, 255, 255, 0.2);
+}
